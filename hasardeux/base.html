@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nombre au hasard</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <video autoplay muted loop id="background-video">
+  <source src="./fond.mp4"   type="video/mp4">
+        </video>
+
+    </div>
+  <h1>Générateur de nombres aléatoires</h1>
+  
+  <label for="min-input">Nombre minimal:</label>
+  <input type="number" id="min-input" min="0" value="0">
+  <br>
+  
+  <label for="max-input">Nombre maximal:</label>
+  <input type="number" id="max-input" min="0" value="100">
+  <br>
+  
+  <button id="generate-btn">Générer un nombre</button>
+  
+  <h2>Résultat:</h2>
+  <p id="result"></p>
+  
+  <script>
+    const generateBtn = document.getElementById("generate-btn");
+    const minInput = document.getElementById("min-input");
+    const maxInput = document.getElementById("max-input");
+    const resultElement = document.getElementById("result");
+    
+    generateBtn.addEventListener("click", () => {
+      const min = parseInt(minInput.value);
+      const max = parseInt(maxInput.value);
+      
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      
+      resultElement.textContent = randomNumber;
+    });
+  </script>
+  <section>
+      <div>
+          <script>
+              alert("Dans cette page, vous pouvez générer un nombre au hasard. Définissez le nombre minimal et maximal, puis cliquez sur générer pour obtenir votre nombre.");
+          </script>
+      </div>
+  </section>
+</body>
+</html>
