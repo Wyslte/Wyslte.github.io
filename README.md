@@ -132,7 +132,3 @@ Maintenant que vous avez ajouté LikOS12 à votre Driver D, suivez ces étapes p
 
 Voilà, vous avez installé et chargé LikOS12 avec succès sur votre machine virtuelle Liko12. Profitez de ses fonctionnalités et de son expérience améliorée !
 
----
-
-Assurez-vous de personnaliser les liens et les instructions en fonction de votre structure de fichiers et de votre processus d'installation spécifiques.
-
